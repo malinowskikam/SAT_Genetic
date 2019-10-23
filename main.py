@@ -61,8 +61,8 @@ fig = go.Figure()
 fig.add_trace(go.Scatter(x=tuple(generations),y=tuple(bests),mode='lines+markers',name='Max'))
 fig.add_trace(go.Scatter(x=tuple(generations),y=tuple(averages),mode='lines+markers',name='Avg'))
 fig.update_layout(
-    title = "Problem plecakowy",
-    xaxis=go.layout.XAxis(title=go.layout.xaxis.Title(text="Generacje")),
-    yaxis=go.layout.YAxis(title=go.layout.yaxis.Title(text="Wartość")),
+    title = "SAT",
+    xaxis=go.layout.XAxis(title=go.layout.xaxis.Title(text="Generations")),
+    yaxis=go.layout.YAxis(title=go.layout.yaxis.Title(text="Clauses satisfied")),
 )
 fig.show()
