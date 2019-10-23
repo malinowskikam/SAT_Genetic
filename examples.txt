@@ -1,0 +1,5 @@
+examples taken from:
+https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html
+
+cnf input format:
+https://people.sc.fsu.edu/~jburkardt/data/cnf/cnf.html
