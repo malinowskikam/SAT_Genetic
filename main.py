@@ -12,8 +12,8 @@ import plotly.graph_objects as go
 chromosome_length = formula.variable_count
 population_size = 200
 mate_rate = 0.5
-mutation_rate = 0.2
-n_of_generations = 2000
+mutation_rate = 0.01
+n_of_generations = 500
 
 
 creator.create("FitnessSAT", base.Fitness, weights=(1.0,))
@@ -37,7 +37,7 @@ def fitness(chromosome):
 toolbox.register("evaluate", fitness)
 toolbox.register("mate", tools.cxTwoPoint)
 toolbox.register("mutate", tools.mutFlipBit, indpb=mutation_rate)
-toolbox.register("select", tools.selTournament, tournsize=3)
+toolbox.register("select", tools.selBest)
 
 pop = toolbox.population(n=population_size)
 
